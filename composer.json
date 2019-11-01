@@ -1,0 +1,25 @@
+{
+  "name": "boxalino/integration-magento2",
+  "description": "Boxalino Magento 2 plugin for integration samples",
+  "type": "magento2-module",
+  "homepage": "http://www.boxalino.com",
+  "keywords": ["boxalino","integration", "narrative", "recommendations", "overlays", "producfinder"],
+  "support": {
+    "email": "support@boxalino.com"
+  },
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "require": {
+    "php": "7.*",
+    "boxalino/plugin-magento2": "^1.6",
+    "magento/framework": "*"
+  },
+  "autoload": {
+    "files": ["registration.php"],
+    "psr-4": {
+      "Boxalino\\Integration\\": "",
+    }
+  }
+}

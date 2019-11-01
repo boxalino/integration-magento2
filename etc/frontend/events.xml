@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Narrative use-case #2:
+ *
+ * Adds context parameters to narrative request via observer to hook to a narrative element
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="catalog_controller_category_init_after">
+        <observer name="Boxalino_Integration::CatalogControllerCategoryInitAfter" instance="Boxalino\Integration\Observer\CatalogControllerCategoryInitAfter" />
+    </event>
+</config>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Narrative use-case #3:
+ *
+ * Dynamic page generator controller on a 2columns-left layout (ex: landing pages)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="boxalino-narrative-landing"/>
+
+        <referenceContainer name="sidebar.main">
+            <block class="Boxalino\Intelligence\Block\BxJourney" name="narrative_left" template="Boxalino_Intelligence::journey/main.phtml">
+                <arguments>
+                    <argument name="position" xsi:type="string">left</argument>
+                    <argument name="choice" xsi:type="string">narrative_landing</argument>
+                    <argument name="additional_choices" xsi:type="string">narrative_banner</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Boxalino\Intelligence\Block\BxJourney" name="narrative_main" template="Boxalino_Intelligence::journey/main_dep.phtml">
+                <arguments>
+                    <argument name="position" xsi:type="string">main</argument>
+                    <argument name="choice" xsi:type="string">narrative_landing</argument>
+                    <argument name="additional_choices" xsi:type="string">narrative_banner</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
