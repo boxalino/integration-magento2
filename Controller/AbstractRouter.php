@@ -88,7 +88,7 @@ abstract class AbstractRouter implements \Magento\Framework\App\RouterInterface
 
         // main page
         $request->setModuleName('boxalinointegration')->setControllerName($this->getController())->setActionName($this->getAction());
-        $request->setAlias(\Magento\Framework\UrlInterface::REWRITE_REQUEST_PATH_ALIAS, $identifier);
+        $request->setAlias(\Magento\Framework\UrlInterface::REWRITE_REQUEST_PATH_ALIAS, $path);
         
         return $this->actionFactory->create('Magento\Framework\App\Action\Forward');
     }

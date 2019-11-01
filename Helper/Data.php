@@ -55,7 +55,7 @@ class Data
      */
     public function isBoxalinoActive()
     {
-        return $this->getBoxalinoHelper()->isPluginEnabled();
+        return $this->boxalinoHelper->isPluginEnabled();
     }
     
 

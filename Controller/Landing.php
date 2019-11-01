@@ -41,7 +41,8 @@ class Landing extends \Boxalino\Integration\Controller\AbstractRouter
 
     /**
      * Return the params that has to be set on the request
-     *
+     * "campaign" parameter is dynamic per your integration use-case
+     * 
      * @return []
      */
     protected function getParams()
