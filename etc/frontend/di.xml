@@ -13,7 +13,7 @@
                 <item name="narrative_landing" xsi:type="array">
                     <item name="class" xsi:type="string">Boxalino\Integration\Controller\Landing</item>
                     <item name="disable" xsi:type="boolean">false</item>
-                    <item name="sortOrder" xsi:type="string">60</item>
+                    <item name="sortOrder" xsi:type="string">10</item>
                 </item>
             </argument>
         </arguments>

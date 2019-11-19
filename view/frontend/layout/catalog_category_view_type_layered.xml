@@ -6,6 +6,8 @@
  * The narratives linked to narrative_category will be displayed in the defined container
  * but it will not be replacing the default facet/view/listing
  * (ex: a CMS block/logic under facets)
+ *
+ * @TODO make sure that the choice/widget names exist and have been publish in your Boxalino Intelligence Admin strategies
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">

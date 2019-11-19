@@ -5,6 +5,7 @@
  *
  * The narratives linked to narrative_category and narrative_banner will be displayed in the defined container
  * but it will not be replacing the default listing
+ * @TODO make sure that the choice/widget names exist and have been publish in your Boxalino Intelligence Admin strategies
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
@@ -14,7 +15,7 @@
                 <arguments>
                     <argument name="position" xsi:type="string">main</argument>
                     <argument name="choice" xsi:type="string">narrative_category</argument>
-                    <argument name="additional_choices" xsi:type="string">narrative_banner</argument>
+                    <!--<argument name="additional_choices" xsi:type="string">narrative_banner</argument>-->
                     <argument name="replace_main" xsi:type="boolean">false</argument>
                 </arguments>
             </block>
@@ -24,7 +25,7 @@
                 <arguments>
                     <argument name="position" xsi:type="string">bottom</argument>
                     <argument name="choice" xsi:type="string">narrative_category</argument>
-                    <argument name="additional_choices" xsi:type="string">narrative_banner</argument>
+                    <!--<argument name="additional_choices" xsi:type="string">narrative_banner</argument>-->
                     <argument name="replace_main" xsi:type="boolean">false</argument>
                 </arguments>
             </block>

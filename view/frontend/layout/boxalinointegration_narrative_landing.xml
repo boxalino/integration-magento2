@@ -4,6 +4,7 @@
  * Narrative use-case #3:
  *
  * Dynamic page generator controller on a 2columns-left layout (ex: landing pages)
+ * @TODO make sure that the choice/widget names exist and have been publish in your Boxalino Intelligence Admin strategies
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
@@ -15,7 +16,6 @@
                 <arguments>
                     <argument name="position" xsi:type="string">left</argument>
                     <argument name="choice" xsi:type="string">narrative_landing</argument>
-                    <argument name="additional_choices" xsi:type="string">narrative_banner</argument>
                 </arguments>
             </block>
         </referenceContainer>
@@ -24,7 +24,7 @@
                 <arguments>
                     <argument name="position" xsi:type="string">main</argument>
                     <argument name="choice" xsi:type="string">narrative_landing</argument>
-                    <argument name="additional_choices" xsi:type="string">narrative_banner</argument>
+                    <!--<argument name="additional_choices" xsi:type="string"></argument>-->
                 </arguments>
             </block>
         </referenceContainer>

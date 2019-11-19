@@ -1,0 +1,18 @@
+<?php
+$src = $this->getLocalizedValue($this->getData('src'));
+$href = $this->getLocalizedValue($this->getData('href'));
+$alt = $this->getLocalizedValue($this->getData('alt'));
+?>
+
+    <a href="<?php echo $href ?>">
+        <img src="<?php echo $src ?>" alt="<?php echo $alt ?>" />
+    </a>
+
+<?php
+
+//get sub-renderings of this view element
+$subRenderings = $this->getSubRenderings();
+foreach ($subRenderings as $subRendering) {
+    echo $this->renderVisualElement($subRendering['visualElement']);
+}
+?>
