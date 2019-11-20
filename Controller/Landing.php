@@ -2,13 +2,13 @@
 
 namespace Boxalino\Integration\Controller;
 
-use Evozon_Blog_Model_Config_Post;
-
 /**
  * Narrative use-case #3
  * 
  * Custom router for the Boxalino Narrative dynamically rendered pages
  * Manages the default match logic
+ *
+ * ex: router that matches a request path like <store-url>/self::BOXALINO_INTEGRATION_SEGMENT_LANDING/<campaign-parameter-value>
  */
 class Landing extends \Boxalino\Integration\Controller\AbstractRouter
 {
@@ -27,12 +27,17 @@ class Landing extends \Boxalino\Integration\Controller\AbstractRouter
      */
     protected function matchPath()
     {
-        $path = $this->_requestPath;
-        if (count($path) < 2) {
+        if(in_array(self::BOXALINO_NARRATIVE_REQUEST_PARAMETER, array_keys($this->request->getParams())))
+        {
             return false;
         }
 
-        if (empty($path[0]) || $path[0] != self::BOXALINO_INTEGRATION_SEGMENT_LANDING) {
+        $path = $this->_requestPath;
+        if (count($path) != 2) {
+            return false;
+        }
+
+        if (empty($path[0]) || $path[0] != self::BOXALINO_INTEGRATION_SEGMENT_LANDING || empty($path[1])) {
             return false;
         }
 
@@ -47,7 +52,7 @@ class Landing extends \Boxalino\Integration\Controller\AbstractRouter
      */
     protected function getParams()
     {
-        return ['campaign'=>$this->_requestPath[1]];
+        return [self::BOXALINO_NARRATIVE_REQUEST_PARAMETER =>$this->_requestPath[1]];
     }
     
 }

@@ -12,6 +12,9 @@ namespace Boxalino\Integration\Controller;
 abstract class AbstractRouter implements \Magento\Framework\App\RouterInterface
 {
 
+
+    const BOXALINO_NARRATIVE_REQUEST_PARAMETER = 'campaign';
+
     /**
      * @var \Magento\Framework\App\ActionFactory
      */
