@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="page-products-noresults"/>
+        <referenceContainer name="content">
+            <block class="Boxalino\Intelligence\Block\BxRecommendationBlock" name="search.result.noresults" template="Boxalino_Intelligence::product/recommendation.phtml">
+                <arguments>
+                    <argument name="widget" xsi:type="string">noresults</argument>
+                    <argument name="min" xsi:type="string">5</argument>
+                    <argument name="max" xsi:type="string">5</argument>
+                    <argument name="scenario" xsi:type="string">other</argument>
+                    <argument name="title" xsi:type="string">You may be interested in the following products</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
