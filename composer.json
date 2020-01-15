@@ -13,7 +13,7 @@
   ],
   "require": {
     "php": "7.*",
-    "boxalino/plugin-magento2": "^1.6",
+    "boxalino/plugin-magento2": "^2.0",
     "magento/framework": "*"
   },
   "autoload": {
