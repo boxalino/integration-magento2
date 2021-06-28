@@ -1,8 +1,12 @@
-# Boxalino Magento 2 - Integration Samples
+# Boxalino Magento 2 - Integration Samples (SDK)
 
 ## Introduction
-This repo is to be used as a sample on how to customize certain Boxalino features.
-The integration is managed by the client, done with the Boxalino support team`s assistance
+This repository is to be used as a sample on how to customize certain Boxalino features.
+The integration is managed by the client, done with the Boxalino support team assistance.
+
+**NOTICE**
+The integration code is compatible for the SDK plugin ONLY
+https://github.com/boxalino/plugin-magento2
 
 You will find suggestions for following use-cases:
 1. Extending the content of a category with a narrative (via update of the layout XML)
